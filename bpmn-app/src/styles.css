@@ -1,11 +1,60 @@
 /* You can add global styles to this file, and also import other style files */
-html,
-body,
-#container {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  height: 100%;
-  margin: 0;
-  overflow: hidden;
-  padding: 0;
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+.navbar-light .navbar-brand {
+  color: #C91B23;
+}
+
+.navbar-light .navbar-brand:hover {
+  color: #C91B23;
+}
+
+.primaryButton {
+  background-color: #F29602;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.primaryButton:hover {
+  background-color: #FDB849;
+  color: white;
+}
+
+.secondaryButton {
+  background-color: #1E325C;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.secondaryButton:hover {
+  background-color: #3C64B9;
+  color: white;
+}
+
+.margin-right {
+  margin-right: 12px;
+}
+
+.margin-left {
+  margin-left: 12px;
+}
+
+.primaryText {
+  color: #C91B23;
+}
+
+.primaryText span {
+  color: #606060;
+}
+
+.secondaryText {
+  color: #FDB849;
+}
+
+.secondaryText span {
+  color: #606060;
 }
