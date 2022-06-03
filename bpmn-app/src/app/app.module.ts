@@ -8,13 +8,15 @@ import { AppRoutingModule } from "./app-routing.module";
 import { HomeComponent } from './home/home.component';
 import { MonacoEditorModule } from 'ngx-monaco-editor';
 import { FormsModule } from "@angular/forms";
+import { ViewerComponent } from './viewer/viewer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CodeComponent,
     DiagramComponent,
-    HomeComponent
+    HomeComponent,
+    ViewerComponent
   ],
   imports: [
     BrowserModule,
