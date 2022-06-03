@@ -58,3 +58,7 @@
 .secondaryText span {
   color: #606060;
 }
+
+.colPadding {
+  padding-left: 26px;
+}
