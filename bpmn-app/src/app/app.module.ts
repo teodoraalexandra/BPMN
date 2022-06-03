@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { MonacoEditorModule } from 'ngx-monaco-editor';
 import { FormsModule } from "@angular/forms";
 import { ViewerComponent } from './viewer/viewer.component';
+import { NgBpmnEditorModule } from 'ng-bpmn'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ViewerComponent } from './viewer/viewer.component';
     HttpClientModule,
     AppRoutingModule,
     MonacoEditorModule.forRoot(),
-    FormsModule
+    FormsModule,
+    NgBpmnEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

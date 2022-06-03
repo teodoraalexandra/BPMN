@@ -1,1 +1,16 @@
-<p>diagram works!</p>
+<div class="container mt-5">
+  <div class="row align-items-center">
+    <div class="col-lg-11 col-md-12">
+      <p>{{ problemStatement }}</p>
+    </div>
+    <div class="col-lg-1 col-md-1">
+      <a class="btn primaryButton" (click)="handleExport()">Export</a>
+    </div>
+
+    <div class="container mt-3">
+      <div style="height: 1000px">
+        <ng-bpmn type="modeler" #ucBpmn></ng-bpmn>
+      </div>
+    </div>
+  </div>
+</div>
