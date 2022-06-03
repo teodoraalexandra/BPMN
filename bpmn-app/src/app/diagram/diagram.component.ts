@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
 import { BpmnEditorComponent } from 'ng-bpmn';
 import { HttpClient } from '@angular/common/http';
 
@@ -10,9 +9,6 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DiagramComponent implements OnInit {
   @ViewChild('ucBpmn') ucBpmn: BpmnEditorComponent | undefined;
-  public data: any;
-
-  xmlModel: string = '';
   problemStatement: string = 'A bank has multiple accounts for clients. There can be several types of bank accounts (deposit, savings, etc)';
 
   constructor(private http: HttpClient) { }
@@ -23,14 +19,16 @@ export class DiagramComponent implements OnInit {
       headers: {observe: 'response'}, responseType: 'text'
     }).subscribe(
       (x: any) => {
-        // @ts-ignore
-        this.ucBpmn.loadXml(x);
+        if (this.ucBpmn) {
+          this.ucBpmn.loadXml(x);
+        }
       },
     );
   }
 
   handleExport() {
-    console.log(this.ucBpmn);
+    // Export as HTML
+    console.log(this.ucBpmn?.el.nativeElement.innerHTML);
   }
 
 }
